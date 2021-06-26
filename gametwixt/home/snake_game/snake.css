@@ -87,3 +87,19 @@ button {
 }
 
 
+@media (max-width:1100px){
+    .container{
+        padding: 200px 0px 200px 0px;
+    }
+
+ 
+}
+
+@media (max-width:540px){
+    .container{
+        padding: 100px 0px 200px 0px;
+    }
+
+ 
+}
+

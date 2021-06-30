@@ -2,7 +2,6 @@
  score = 0;
 cross = true;
 document.onkeydown = function(e) {
-    console.log("Key is: ", e.key)
     if(e.key=="ArrowUp"){
         bear = document.querySelector('.bear');
         bear.classList.add('animateBear');
@@ -36,18 +35,17 @@ setInterval(() => {
 
     offsetX = Math.abs(bx-px);
     offsetY = Math.abs(by-py);
-    console.log(offsetX,offsetY)
 
     if(offsetX<100 && offsetY<60 ){
         score=0;
         updateScore(score);
-       alert("Game Over!!");
+       alert("Game Over!! Click OK to restart game");
+       board.style.animationPlayState = 'paused';
         porcupine.classList.remove('obstaclePorcupine');
-        board.innerHTML=" ";
         
     }
     else if(offsetX <40 && cross) {
-        score+=1;
+        score++;
         updateScore(score);
         cross = false;
         setTimeout(

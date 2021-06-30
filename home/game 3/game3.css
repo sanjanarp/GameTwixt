@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
 *{
     padding: 0;
     margin:0;
@@ -9,14 +11,42 @@ body{
     
 }
 
+.title{
+    font-family: 'Piedra', cursive;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.103);
+    text-shadow: 0 0 4px #fcfcfcfb  , 0 0 5px #a7e4e9;
+
+
+}
+
 .board{
     position: relative;
     width:100%;
-    height: 85vh;
-    background:linear-gradient(rgba(240, 6, 45, 0.726),rgb(248, 215, 70));
+    height: 90vh;
     border-radius: 10px;
     border: 3px solid black;
     overflow: hidden;
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-color: rgba(161, 87, 18, 0.733);
+    background-image: url(game3bg.png);
+    animation: bganim 75s linear infinite ;
+}
+
+@keyframes bganim {
+   0%{
+       background-position: 0 0;
+   }
+   100%{
+    background-position: -2122px 0;
+   }
+}
+
+#scoreBoard{
+    font-size: xx-large;
+    font-weight: 900;
+    padding: 40px;
     
 }
 
@@ -53,7 +83,7 @@ body{
        bottom: 0;
     }
     50%{
-         bottom: 550px;
+         bottom: 450px;
     }
     100%{
           bottom: 0;
@@ -62,7 +92,7 @@ body{
 }
 
  .obstaclePorcupine{
-     animation: obstaclePorcupine 4s linear infinite ;
+     animation: obstaclePorcupine 3s linear infinite ;
  }
 
 @keyframes obstaclePorcupine{
@@ -71,18 +101,29 @@ body{
     }
     100%{
 
-        left:-10vw
+        left:-10vw;
     }
 }
 
-@media (max-width:800px){
+@media (max-width:900px){
     .porcupine{
-        height: 80px;
-    width:100px;
+        height: 82px;
+    width:90px;
     
     }
     .bear{
-        height: 124px;
-        width:137px;
+        height: 134px;
+        width:140px;
+    }
+    .board{
+        height: 80vh;
+        background-size: cover;
+        background-repeat: repeat-x;
+    }
+
+    .title{
+        font-size: 60px;
     }
 }
+
+
